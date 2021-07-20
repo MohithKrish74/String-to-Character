@@ -6,22 +6,14 @@ public class Main
 {
     public static void main(String[] args)
     {
-        System.out.print("Enter the size of the array: ");
+        System.out.print("Enter the String: ");
         Scanner in =new Scanner(System.in);
-        int size=in.nextInt();
-        int array[]=new int[size];
-        int Minelement=100000;
-        for(int i=0;i<size;i++)
-        {
-            array[i]=in.nextInt();
-        }
-        System.out.println("User Array : "+ Arrays.toString(array));
-        for(int i=0;i<array.length;i++)
-        {
-            if(array[i]<Minelement)
-                Minelement=array[i];
-        }
-        System.out.print("Minimum element in the Array : "+Minelement);
+        String string =in.nextLine();
+        char char_array[]=new char[string.length()];
+        for(int i=0;i<string.length();i++)
+            char_array[i]=string.charAt(i);
+        System.out.println(Arrays.toString(char_array));
+
     }
 
 }
